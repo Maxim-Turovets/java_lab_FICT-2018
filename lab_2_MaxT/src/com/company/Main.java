@@ -16,31 +16,34 @@ public class Main {
 
         int n, m;
         Scanner reader = new Scanner(System.in);  // ввод чисел
-        System.out.print("Введите n и m ");
+        System.out.print("Введите размер m и n ");
         n = reader.nextInt();
         m = reader.nextInt();
+        if (n<=0 ||m<=0)
+            System.out.print("Размер должен быть больше ноля\n");
+
 
         char [][]A=new char [m][n];
         char [][]B=new char [m][n];
-        
 
 
 
-        //init(A,m,n,reader);
-      //  init(B,m,n,reader);
 
-        //System.out.print("\nМатрица А\n");
-        //output(A,m,n);
-       // System.out.print("\nМатрица В\n");
-        //output(B,m,n);
+        init(A,m,n,reader);
+        init(B,m,n,reader);
+
+        System.out.print("\nМатрица А\n");
+        output(A,m,n);
+        System.out.print("\nМатрица В\n");
+        output(B,m,n);
 
 
-        //System.out.print("\nCумированная матрица по модулю 2 \nтипа integer\n");
-        //int [][] C = modulo_sum(A,B,m,n);
-        int max=0;
-        output_int(S,m,n);
-        sum_min(S,m,n);
-        sum_max(S,m,n);
+        System.out.print("\nCумированная матрица по модулю 2 \nтипа integer\n");
+        int [][] C = modulo_sum(A,B,m,n);
+
+        output_int(C,m,n);
+        sum_min(C,m,n);
+        sum_max(C,m,n);
 
 
 
@@ -72,6 +75,7 @@ public class Main {
         }
     }
 
+    // функция преобразования типа
     public static int cast_int (char type)
     {
         int swap;
@@ -79,6 +83,7 @@ public class Main {
         return  swap;
     }
 
+    // преобразование типа int в тип char
     public static char  [][]cast_char (int [][] Arr,int m , int n)
     {
         char [][] Arr2 = new char [m][n];
@@ -90,7 +95,7 @@ public class Main {
             return Arr2;
     }
 
-
+ // сума по модулю 2
     public static int [][] modulo_sum(char [][] Arr_A,char [][] Arr_B,int m, int n)
     {
         int [][]Sum_mod=new int [m][n];
@@ -103,6 +108,7 @@ public class Main {
             return Sum_mod;
     }
 
+    // вывод матрицы
     public static void output_int(int[][] arr,int m,int n)
     {
         for (int i = 0; i < m; i++) {
@@ -113,7 +119,7 @@ public class Main {
             }
         }
     }
-
+   //  сума максимальных элементов
     public static void sum_max(int[][] arr,int m,int n)
     {
         int max,sum=0;
@@ -133,7 +139,7 @@ public class Main {
         System.out.print(sum);
         System.out.print("\n");
     }
-
+// сума минимальных элементов
     public static void sum_min(int[][] arr,int m,int n)
     {
         int min,sum=0;
