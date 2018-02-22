@@ -3,6 +3,7 @@ import java.util.Scanner;
 
 public class Main {
 
+
     public static void main(String[] args) {
         // write your code here
 
@@ -20,16 +21,30 @@ public class Main {
         m = reader.nextInt();
 
         char [][]A=new char [m][n];
+        char [][]B=new char [m][n];
 
-        init(A,m,n,reader);
-        output(A,m,n);
+  int [][] S =new int [5][5];
+
+  for (int i=0;i<5;i++)
+      for(int j=0;j<5;j++)
+          S[i][j]=i;
+
+        //init(A,m,n,reader);
+      //  init(B,m,n,reader);
+
+        //System.out.print("\nМатрица А\n");
+        //output(A,m,n);
+       // System.out.print("\nМатрица В\n");
+        //output(B,m,n);
 
 
-      /*int a;
-      char b=' ';
-      a=(int) b;
+        //System.out.print("\nCумированная матрица по модулю 2 \nтипа integer\n");
+        //int [][] C = modulo_sum(A,B,m,n);
+        int max=0;
+        output_int(S,m,n);
+        sum_max(S,m,n);
 
-      System.out.print(a);*/
+
 
     }
 
@@ -50,7 +65,6 @@ public class Main {
    //  функция вывода матрицы
     public static void output(char[][] arr,int m,int n)
     {
-        System.out.print("Матрица :\n");
         for (int i = 0; i < m; i++) {
            System.out.print("\n");
             for (int j = 0; j < n; j++) {
@@ -58,6 +72,65 @@ public class Main {
                 System.out.print(" ");
             }
         }
+    }
+
+    public static int cast_int (char type)
+    {
+        int swap;
+        swap=(int)type;
+        return  swap;
+    }
+
+    public static char  [][]cast_char (int [][] Arr,int m , int n)
+    {
+        char [][] Arr2 = new char [m][n];
+
+        for (int i = 0; i < m; i++)
+            for (int j = 0; j < n; j++) {
+                Arr2[i][j] = (char)Arr[i][j];
+            }
+            return Arr2;
+    }
+
+
+    public static int [][] modulo_sum(char [][] Arr_A,char [][] Arr_B,int m, int n)
+    {
+        int [][]Sum_mod=new int [m][n];
+
+        for (int i = 0; i < m; i++)
+            for (int j = 0; j < n; j++)
+            {
+                Sum_mod[i][j]=cast_int(Arr_A[i][j])^cast_int(Arr_B[i][j]);
+            }
+            return Sum_mod;
+    }
+
+    public static void output_int(int[][] arr,int m,int n)
+    {
+        for (int i = 0; i < m; i++) {
+            System.out.print("\n");
+            for (int j = 0; j < n; j++) {
+                System.out.print(arr[i][j]);
+                System.out.print(" ");
+            }
+        }
+    }
+
+    public static void sum_max(int[][] arr,int m,int n)
+    {
+        int max=0,sum=0;
+        for (int i=1;i<m;i+=2)
+        {
+            for(int j=0;j<n;j++)
+            {
+                if(max<arr[j][i])
+                {
+                    max=arr[j][i];
+                }
+            }
+            sum+=max;
+        }
+        System.out.print(sum);
     }
 
 
