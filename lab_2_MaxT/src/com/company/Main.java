@@ -19,6 +19,10 @@ public class Main {
         n = reader.nextInt();
         m = reader.nextInt();
 
+        char [][]A=new char [m][n];
+
+        init(A,m,n,reader);
+        output(A,m,n);
 
 
       /*int a;
@@ -34,8 +38,7 @@ public class Main {
     //   функция инициализации  массива
     public static void init(char[][] arr,int m, int n,Scanner reader)
     {
-
-        arr = new char[m][n];
+        System.out.print("Введите элементы массива :\n");
 
         for (int i = 0; i < m; i++)
             for (int j = 0; j < n; j++) {
@@ -47,9 +50,9 @@ public class Main {
    //  функция вывода матрицы
     public static void output(char[][] arr,int m,int n)
     {
-
+        System.out.print("Матрица :\n");
         for (int i = 0; i < m; i++) {
-            System.out.print("\n");
+           System.out.print("\n");
             for (int j = 0; j < n; j++) {
                 System.out.print(arr[i][j]);
                 System.out.print(" ");
