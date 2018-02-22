@@ -130,7 +130,7 @@ public class Main {
             }
             sum+=max;
         }
-        System.out.print(max);
+        System.out.print(sum);
     }
 
 
