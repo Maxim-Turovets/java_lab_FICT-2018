@@ -4,35 +4,22 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-	// write your code here
+        // write your code here
 
 
         double var = 6123;
-        double c5 = var%5;     // == 3
-        double c7 = var%7;     // == 5
-        double c11=var%11;     // == 7
+        double c5 = var % 5;     // == 3
+        double c7 = var % 7;     // == 5
+        double c11 = var % 11;     // == 7
 
-        int n,m;
 
+        int n, m;
         Scanner reader = new Scanner(System.in);  // ввод чисел
         System.out.print("Введите n и m ");
         n = reader.nextInt();
         m = reader.nextInt();
 
-        char [][] mass_A = new char [n][m];
-        char [][] mass_B = new char [n][m];
 
-        for (int i=0;i<n;i++)
-            for (int j=0;j<m;j++)
-            {
-                mass_A[i][j]=reader.next().charAt(0);
-            }
-
-        for (int i=0;i<n;i++)
-            for (int j=0;j<m;j++)
-            {
-                System.out.print( mass_A[i][j]);
-            }
 
       /*int a;
       char b=' ';
@@ -41,4 +28,34 @@ public class Main {
       System.out.print(a);*/
 
     }
+
+
+
+    //   функция инициализации  массива
+    public static void init(char[][] arr,int m, int n,Scanner reader)
+    {
+
+        arr = new char[m][n];
+
+        for (int i = 0; i < m; i++)
+            for (int j = 0; j < n; j++) {
+                arr[i][j] = reader.next().charAt(0);
+            }
+
+    }
+    
+   //  функция вывода матрицы
+    public static void output(char[][] arr,int m,int n)
+    {
+
+        for (int i = 0; i < m; i++) {
+            System.out.print("\n");
+            for (int j = 0; j < n; j++) {
+                System.out.print(arr[i][j]);
+                System.out.print(" ");
+            }
+        }
+    }
+
+
 }
