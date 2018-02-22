@@ -22,12 +22,9 @@ public class Main {
 
         char [][]A=new char [m][n];
         char [][]B=new char [m][n];
+        
 
-  int [][] S =new int [5][5];
 
-  for (int i=0;i<5;i++)
-      for(int j=0;j<5;j++)
-          S[i][j]=i;
 
         //init(A,m,n,reader);
       //  init(B,m,n,reader);
@@ -42,6 +39,7 @@ public class Main {
         //int [][] C = modulo_sum(A,B,m,n);
         int max=0;
         output_int(S,m,n);
+        sum_min(S,m,n);
         sum_max(S,m,n);
 
 
@@ -118,19 +116,42 @@ public class Main {
 
     public static void sum_max(int[][] arr,int m,int n)
     {
-        int max=0,sum=0;
-        for (int i=1;i<m;i+=2)
+        int max,sum=0;
+
+        for (int i=0;i<m;i+=2)
         {
-            for(int j=0;j<n;j++)
-            {
-                if(max<arr[j][i])
-                {
-                    max=arr[j][i];
+            max=arr[0][i];
+            for(int j=0;j<n;j++) {
+                if (max < arr[j][i]) {
+                    max = arr[j][i];
                 }
             }
             sum+=max;
+            max=0;
         }
+        System.out.print("\nCума максимальных элементов нечетных столбцов = ");
         System.out.print(sum);
+        System.out.print("\n");
+    }
+
+    public static void sum_min(int[][] arr,int m,int n)
+    {
+        int min,sum=0;
+
+        for (int i=1;i<m;i+=2)
+        {
+            min=arr[0][i];
+            for(int j=0;j<n;j++) {
+                if (min > arr[j][i]) {
+                    min = arr[j][i];
+                }
+            }
+            sum+=min;
+            min=0;
+        }
+        System.out.print("\nCума минимальных элементов четных столбцов = ");
+        System.out.print(sum);
+        System.out.print("\n");
     }
 
 
