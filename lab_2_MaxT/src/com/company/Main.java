@@ -41,9 +41,9 @@ public class Main {
         System.out.print("\nCумированная матрица по модулю 2 \nтипа integer\n");
         int [][] C = modulo_sum(A,B,m,n);
 
-        output_int(C,m,n);
-        sum_min(C,m,n);
-        sum_max(C,m,n);
+        output_int(C,m+m,n+n);
+        sum_min(C,m*2,n*2);
+        sum_max(C,m*2,n*2);
 
 
 
@@ -95,16 +95,40 @@ public class Main {
             return Arr2;
     }
 
- // сума по модулю 2
+ 
     public static int [][] modulo_sum(char [][] Arr_A,char [][] Arr_B,int m, int n)
     {
-        int [][]Sum_mod=new int [m][n];
+        int [][]Sum_mod=new int [m+m][n+n];
 
         for (int i = 0; i < m; i++)
+            for (int j = 0; j < n+n; j++)
+            {
+                if(j>n-1)
+                {
+                    Sum_mod[i][j]=0;
+                }
+                else{
+                    Sum_mod[i][j]=Arr_A[i][j];
+                }
+            }
+
+
+        for (int i = m; i < m*2; i++)
             for (int j = 0; j < n; j++)
             {
-                Sum_mod[i][j]=cast_int(Arr_A[i][j])^cast_int(Arr_B[i][j]);
+                if(j<n-1)
+                {
+                    Sum_mod[i][j]=0;
+                }
             }
+
+        for (int i2=0,i = m; i < m*2; i++,i2++)
+            for (int j2=0,j = n; j < n*2; j++,j2++)
+            {
+                    Sum_mod[i][j]=Arr_B[i2][j2];
+            }
+
+
             return Sum_mod;
     }
 
@@ -139,6 +163,7 @@ public class Main {
         System.out.print(sum);
         System.out.print("\n");
     }
+
 // сума минимальных элементов
     public static void sum_min(int[][] arr,int m,int n)
     {
