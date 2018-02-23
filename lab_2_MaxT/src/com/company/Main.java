@@ -14,31 +14,41 @@ public class Main {
         double c11 = var % 11;     // == 7
 
 
-        int n, m;
-        Scanner reader = new Scanner(System.in);  // ввод чисел
+        int n=3, m=3;
+    /*    Scanner reader = new Scanner(System.in);  // ввод чисел
         System.out.print("Введите размер m и n ");
         n = reader.nextInt();
         m = reader.nextInt();
         if (n<=0 ||m<=0)
-            System.out.print("Размер должен быть больше ноля\n");
+            System.out.print("Размер должен быть больше ноля\n");*/
 
 
         char [][]A=new char [m][n];
         char [][]B=new char [m][n];
 
 
+        // инициализация матрицы А
 
+        A[0][0]='j';    A[0][1]='a';     A[0][2]='v';
+        A[1][0]='a';    A[1][1]='i';     A[1][2]='s';
+        A[2][0]='l';    A[2][1]='o';     A[2][2]='v';
 
-        init(A,m,n,reader);
-        init(B,m,n,reader);
-
+       // вывод матрицы  А
         System.out.print("\nМатрица А\n");
         output(A,m,n);
+
+        //инициализация матрицы В
+
+        B[0][0]='m';    B[0][1]='a';     B[0][2]='x';
+        B[1][0]='t';    B[1][1]='u';     B[1][2]='r';
+        B[2][0]='e';    B[2][1]='c';     B[2][2]='q';
+
+        // вывод матрицы В
         System.out.print("\nМатрица В\n");
         output(B,m,n);
 
 
-        System.out.print("\nCумированная матрица по модулю 2 \nтипа integer\n");
+        System.out.print("\nCумированная матрица А и В \nтипа integer\n");
         int [][] C = modulo_sum(A,B,m,n);
 
         output_int(C,m+m,n+n);
@@ -95,7 +105,7 @@ public class Main {
             return Arr2;
     }
 
- 
+
     public static int [][] modulo_sum(char [][] Arr_A,char [][] Arr_B,int m, int n)
     {
         int [][]Sum_mod=new int [m+m][n+n];
