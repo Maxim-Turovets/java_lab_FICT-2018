@@ -1,6 +1,12 @@
 package com.company;
 import java.util.Scanner;
-
+/*
+Сначала делал ввод елементоа массива через консоль (соответствующие функции остались)
+но поскольку вы сказали , самим инициализировать массив то я сделал это сам
+прошу отнестись с пониманием...
+изменение размера работает , но поскольку все елементы уже инициализированы , его менять нельзя
+Спасибо...
+*/
 public class Main {
 
 
@@ -48,7 +54,7 @@ public class Main {
         output(B,m,n);
 
 
-        System.out.print("\nCумированная матрица А и В \nтипа integer\n");
+        System.out.print("\nCумированная матрица А и В (полная сума #лог. или#) \nтипа integer\n");
         int [][] C = modulo_sum(A,B,m,n);
 
         output_int(C,m+m,n+n);
@@ -149,7 +155,7 @@ public class Main {
             System.out.print("\n");
             for (int j = 0; j < n; j++) {
                 System.out.print(arr[i][j]);
-                System.out.print(" ");
+                System.out.print("\t");
             }
         }
     }
