@@ -91,25 +91,6 @@ public class Main {
         }
     }
 
-    // функция преобразования типа
-    public static int cast_int (char type)
-    {
-        int swap;
-        swap=(int)type;
-        return  swap;
-    }
-
-    // преобразование типа int в тип char
-    public static char  [][]cast_char (int [][] Arr,int m , int n)
-    {
-        char [][] Arr2 = new char [m][n];
-
-        for (int i = 0; i < m; i++)
-            for (int j = 0; j < n; j++) {
-                Arr2[i][j] = (char)Arr[i][j];
-            }
-            return Arr2;
-    }
 
 
     public static int [][] modulo_sum(char [][] Arr_A,char [][] Arr_B,int m, int n)
