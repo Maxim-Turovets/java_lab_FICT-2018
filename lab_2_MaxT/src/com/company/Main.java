@@ -13,7 +13,6 @@ public class Main {
     public static void main(String[] args) {
         // write your code here
 
-
         double var = 6123;
         double c5 = var % 5;     // == 3
         double c7 = var % 7;     // == 5
@@ -60,12 +59,7 @@ public class Main {
         output_int(C,m+m,n+n);
         sum_min(C,m*2,n*2);
         sum_max(C,m*2,n*2);
-
-
-
     }
-
-
 
     //   функция инициализации  массива
     public static void init(char[][] arr,int m, int n,Scanner reader)
