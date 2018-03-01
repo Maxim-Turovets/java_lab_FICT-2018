@@ -29,7 +29,7 @@ System.out.print("ВАШ ТЕКСТ\n\n");
         String [] string_array = Parsing(str,'?');   // нахождение вопросителных предложений
         output(string_array);                            // вывод  вопросительных предложений
 
-
+        wordLenght(string_array);
     }
 
 
@@ -74,5 +74,25 @@ System.out.print("ВАШ ТЕКСТ\n\n");
             System.out.print(str[i]);
             System.out.print("\n");
         }
+    }
+
+    public static void wordLenght(String [] str)
+    {
+        /*for (int i=0;i<str.length;i++)
+        {*/
+             String [] string_array = Parsing(str[0],' ');
+             System.out.print(string_array[0]);
+             for (int i=0;i<string_array.length;i++)
+             {
+                 System.out.print(string_array[i]);
+                 for (int j=0;j<string_array.length;j++)
+                 {
+                     if(i!=j && string_array[i]==string_array[j])
+                     {
+                         System.out.print(string_array[i]);
+                     }
+                 }
+             }
+        //}
     }
 }
