@@ -66,28 +66,29 @@ public class Main {
     }
 
     public static void wordLenght(String[] str,int len) {// печать слова указаной длинны без дубликатов
-        
-        for (int k = 0; k < str.length; k++)
-        {
-            String[] string_array = Parsing(str[k], ' ');
+        if(len<=0)
+            System.out.print("Не коректные данные");
+        else {
+            for (int k = 0; k < str.length; k++) {
+                String[] string_array = Parsing(str[k], ' ');
 
-        for (int i = 0; i < string_array.length; i++)     // удаление дубликатов
-            for (int j = 0; j < string_array.length; j++)
-                if (i != j && compare(string_array[i], string_array[j]) == true)
-                    string_array[i] = "";
+                for (int i = 0; i < string_array.length; i++)     // удаление дубликатов
+                    for (int j = 0; j < string_array.length; j++)
+                        if (i != j && compare(string_array[i], string_array[j]) == true)
+                            string_array[i] = "";
 
-            for (int i = 0; i < string_array.length; i++)
-            {
-                if(string_array[i].length()==len+1) {
-                    System.out.print("Предложение №");
-                    System.out.print(k+1);
-                    System.out.print(" Слово : ");
-                    System.out.print(string_array[i]);
-                    System.out.print("\n");
+                for (int i = 0; i < string_array.length; i++) {
+                    if (string_array[i].length() == len + 1) {
+                        System.out.print("Предложение №");
+                        System.out.print(k + 1);
+                        System.out.print(" Слово : ");
+                        System.out.print(string_array[i]);
+                        System.out.print("\n");
+                    }
                 }
-            }
 
-    }
+            }
+        }
     }
 
     public static boolean compare(String str1, String str2) {
