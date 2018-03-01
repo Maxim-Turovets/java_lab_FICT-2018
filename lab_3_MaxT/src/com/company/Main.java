@@ -12,33 +12,20 @@ public class Main {
     /*    StringBuilder string = new StringBuilder(" ");
         String str=string.toString();
 
+        }*/
+System.out.print("ВАШ ТЕКСТ\n\n");
 
-        for (int i=0;i<str.length();i++)
-        System.out.print(str.charAt(i));
+    String str=
+            "Филип улыбнулся.\n"+
+            "Этот художник своей жизни явно не смог создать для себя ничего, кроме уродливого прозябания.\n" +
+            "Кроншоу на него поглядел и наполнил свой стакан.\n" +
+            " Он послал официанта за пачкой сигарет.\n"+
+                    "— Помилуйте, это ведь сложный вопрос. А как бы вы сами на него ответили?\n"+
+                    "— Никак, потому что ответ этот каждый должен найти для себя сам. Но для чего, по-вашему, вы родились на свет божий?\n";
 
-       // char [] ch = new char [10];
-        String []s = new String [100];
-
-       int a=0;
-        for (int i=0;i<str.length();i++)
-        {
-           if(str.charAt(i)!=' ')
-           {
-               s[a]+=str.charAt(i);
-           }
-           else {
-               a++;
-           }
-
-
-        }
-
-       System.out.print(s[0]);
-        System.out.print("\n");
-        System.out.print(s[1]);*/
-
-    String str="Привет как дела.Все хорошо.А ты как? Как семья? Как дети ?";
-    Parsing(str);
+        System.out.print(str);
+        System.out.print("\n\nВопросительные предложения :\n");
+        Parsing(str);
 
     }
 
@@ -49,7 +36,7 @@ public class Main {
     public static void /*String []*/ Parsing (String str)
     {
         char dtr='?';
-        int count = 0,index=0;
+        int count = 1,index=0;
 
         for (int i=0;i<str.length();i++)
         {
@@ -63,7 +50,8 @@ public class Main {
             min_str[i]="";
 
 
-        for (int i =0;i<str.length();i++)
+
+        for (int i=0;i<str.length();i++)
           {
             min_str[index]+=str.charAt(i);
 
