@@ -4,24 +4,21 @@ public class Main {
 
     public static void main(String[] args) {
 
-        double var = 6123;         // номер зачетной книжки
+        double var = 6123;
+        double c3 = var % 3;
+        double c17 = var % 17;
 
-        double c3 = var % 3;         //   = 0
-        double c17 = var % 17;       //   = 3
 
-    /*    StringBuilder string = new StringBuilder(" ");
-        String str=string.toString();
 
-        }*/
+       String str=
+               "Вы уверены что правильно поступаете ?\n"+
+               "Мы не можем быть всегда уверены что делаем  это правильно.\n"+
+               "А это правда - правда  вы не такой как все ?\n"+
+               "Мне кажется, это не столь важно.\n"+ "Думаете ?\n";
+
+
         System.out.print("ВАШ ТЕКСТ\n\n");
 
-        String str =
-                "Филип улыбнулся.\n" +
-                        "Этот художник своей жизни явно не смог создать для себя ничего, кроме уродливого прозябания.\n" +
-                        "Кроншоу на него поглядел и наполнил свой стакан.\n" +
-                        " Он послал официанта за пачкой сигарет.\n" +
-                        "— Помилуйте, это ведь сложный вопрос.А как бы вы сами на него ответили?\n" +
-                        "— Никак, потому что ответ этот каждый должен найти для себя сам.Но для чего, по-вашему, вы родились на свет божий?\n";
 
         System.out.print(str);
         System.out.print("\n\nВопросительные предложения :\n");
@@ -29,7 +26,8 @@ public class Main {
         String[] string_array = Parsing(str, '?');   // нахождение вопросителных предложений
         output(string_array);                            // вывод  вопросительных предложений
 
-        wordLenght(string_array);
+        System.out.print("Вывод слов заданной длинны в предложении\n"); // в данном случае длинна
+        wordLenght(string_array,3);                                 // = 3
     }
 
 
@@ -67,7 +65,8 @@ public class Main {
         }
     }
 
-    public static void wordLenght(String[] str) {   // печать слова указаной длинны без дубликатов
+    public static void wordLenght(String[] str,int len) {// печать слова указаной длинны без дубликатов
+        
         for (int k = 0; k < str.length; k++)
         {
             String[] string_array = Parsing(str[k], ' ');
@@ -77,6 +76,16 @@ public class Main {
                 if (i != j && compare(string_array[i], string_array[j]) == true)
                     string_array[i] = "";
 
+            for (int i = 0; i < string_array.length; i++)
+            {
+                if(string_array[i].length()==len+1) {
+                    System.out.print("Предложение №");
+                    System.out.print(k+1);
+                    System.out.print(" Слово : ");
+                    System.out.print(string_array[i]);
+                    System.out.print("\n");
+                }
+            }
 
     }
     }
