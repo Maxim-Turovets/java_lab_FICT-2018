@@ -8,17 +8,13 @@ public class Main {
         double c3 = var % 3;
         double c17 = var % 17;
 
-
-
        String str=
                "Вы уверены что правильно поступаете ?\n"+
                "Мы не можем быть всегда уверены что делаем  это правильно.\n"+
                "А это правда - правда  вы не такой как все ?\n"+
                "Мне кажется, это не столь важно.\n"+ "Думаете ?\n";
 
-
         System.out.print("ВАШ ТЕКСТ\n\n");
-
 
         System.out.print(str);
         System.out.print("\n\nВопросительные предложения :\n");
@@ -31,7 +27,8 @@ public class Main {
     }
 
 
-    public static String[] Parsing(String str, char dtr) {
+    public static String[] Parsing(String str, char dtr)
+    {
         int count = 1, index = 0;
 
         for (int i = 0; i < str.length(); i++) {
@@ -39,13 +36,13 @@ public class Main {
                 count++;
         }
 
-
         String[] min_str = new String[count];
         for (int i = 0; i < count; i++)
             min_str[i] = "";
 
 
-        for (int i = 0; i < str.length(); i++) {
+        for (int i = 0; i < str.length(); i++)
+        {
             min_str[index] += str.charAt(i);
 
             if (str.charAt(i) == '.')
@@ -54,12 +51,13 @@ public class Main {
             if (str.charAt(i) == dtr)
                 index++;
         }
-
         return min_str;
     }
 
-    public static void output(String[] str) {
-        for (int i = 0; i < str.length; i++) {
+    public static void output(String[] str)
+    {
+        for (int i = 0; i < str.length; i++)
+        {
             System.out.print(str[i]);
             System.out.print("\n");
         }
@@ -77,8 +75,10 @@ public class Main {
                         if (i != j && compare(string_array[i], string_array[j]) == true)
                             string_array[i] = "";
 
-                for (int i = 0; i < string_array.length; i++) {
-                    if (string_array[i].length() == len + 1) {
+                for (int i = 0; i < string_array.length; i++)
+                {
+                    if (string_array[i].length() == len + 1)
+                    {
                         System.out.print("Предложение №");
                         System.out.print(k + 1);
                         System.out.print(" Слово : ");
@@ -86,7 +86,6 @@ public class Main {
                         System.out.print("\n");
                     }
                 }
-
             }
         }
     }
@@ -103,9 +102,6 @@ public class Main {
           else
               return false;
         }
-
         return  ret;
     }
-
-
 }
