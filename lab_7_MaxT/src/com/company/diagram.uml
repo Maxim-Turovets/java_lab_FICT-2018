@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="366.1875" y="0.0">com.company.Vegetables</node>
+    <node x="730.1875" y="221.0">com.company.Tomato</node>
+    <node x="47.5" y="188.0">com.company.MySet</node>
+    <node x="495.95915178571425" y="393.0">com.company.Main</node>
+    <node x="840.1875" y="221.0">com.company.Beet</node>
+    <node x="136.5" y="99.0">com.company.Salad</node>
+    <node x="931.1875" y="221.0">com.company.Carrot</node>
+    <node x="531.1875" y="199.0">com.company.MyException</node>
+    <node x="29.554241071428578" y="393.0">org.junit.MySetTest</node>
+    <node x="428.1875" y="221.0">com.company.Potato</node>
+    <node x="327.1875" y="221.0">com.company.Onion</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="org.junit.MySetTest" target="com.company.MySet">
+      <point x="38.625" y="-14.5" />
+      <point x="119.67924107142858" y="373.0" />
+      <point x="142.75" y="373.0" />
+      <point x="-31.75" y="47.5" />
+    </edge>
+    <edge source="com.company.Carrot" target="com.company.Vegetables">
+      <point x="0.0" y="-14.5" />
+      <point x="971.6875" y="49.0" />
+      <point x="464.625" y="49.0" />
+      <point x="45.9375" y="14.5" />
+    </edge>
+    <edge source="org.junit.MySetTest" target="com.company.Salad">
+      <point x="-38.625" y="-14.5" />
+      <point x="42.42924107142858" y="373.0" />
+      <point x="26.0" y="373.0" />
+      <point x="26.0" y="148.0" />
+      <point x="141.92857142857144" y="148.0" />
+      <point x="-32.571428571428555" y="14.5" />
+    </edge>
+    <edge source="com.company.MySet" target="com.company.Salad">
+      <point x="0.0" y="-47.5" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="com.company.Tomato" target="com.company.Vegetables">
+      <point x="0.0" y="-14.5" />
+      <point x="775.1875" y="69.0" />
+      <point x="438.375" y="69.0" />
+      <point x="19.6875" y="14.5" />
+    </edge>
+    <edge source="com.company.Main" target="com.company.MyException">
+      <point x="7.03125" y="-14.5" />
+      <point x="540.4904017857143" y="313.0" />
+      <point x="665.4375" y="313.0" />
+      <point x="44.75" y="36.5" />
+    </edge>
+    <edge source="com.company.Salad" target="com.company.Vegetables">
+      <point x="-25.33333333333337" y="-14.5" />
+      <point x="149.16666666666663" y="49.0" />
+      <point x="372.75" y="49.0" />
+      <point x="-45.9375" y="14.5" />
+    </edge>
+    <edge source="com.company.Onion" target="com.company.Vegetables">
+      <point x="0.0" y="-14.5" />
+      <point x="367.6875" y="79.0" />
+      <point x="412.125" y="79.0" />
+      <point x="-6.5625" y="14.5" />
+    </edge>
+    <edge source="com.company.Beet" target="com.company.Vegetables">
+      <point x="0.0" y="-14.5" />
+      <point x="875.6875" y="59.0" />
+      <point x="451.5" y="59.0" />
+      <point x="32.8125" y="14.5" />
+    </edge>
+    <edge source="com.company.Main" target="com.company.Salad">
+      <point x="-25.78125" y="-14.5" />
+      <point x="507.67790178571425" y="353.0" />
+      <point x="312.0" y="353.0" />
+      <point x="312.0" y="158.0" />
+      <point x="196.21428571428567" y="158.0" />
+      <point x="21.714285714285666" y="14.5" />
+    </edge>
+    <edge source="com.company.Potato" target="com.company.Vegetables">
+      <point x="0.0" y="-14.5" />
+      <point x="469.6875" y="79.0" />
+      <point x="425.25" y="79.0" />
+      <point x="6.5625" y="14.5" />
+    </edge>
+    <edge source="com.company.Main" target="com.company.MySet">
+      <point x="-30.46875" y="-14.5" />
+      <point x="502.99040178571425" y="363.0" />
+      <point x="269.75" y="363.0" />
+      <point x="95.25" y="47.5" />
+    </edge>
+    <edge source="com.company.Main" target="com.company.Tomato">
+      <point x="16.40625" y="-14.5" />
+      <point x="549.8654017857143" y="333.0" />
+      <point x="797.6875" y="333.0" />
+      <point x="22.5" y="14.5" />
+    </edge>
+    <edge source="com.company.Main" target="com.company.Carrot">
+      <point x="35.15625" y="-14.5" />
+      <point x="568.6154017857143" y="373.0" />
+      <point x="991.9375" y="373.0" />
+      <point x="20.25" y="14.5" />
+    </edge>
+    <edge source="com.company.Main" target="com.company.Beet">
+      <point x="21.09375" y="-14.5" />
+      <point x="554.5529017857143" y="343.0" />
+      <point x="857.9375" y="343.0" />
+      <point x="-17.75" y="14.5" />
+    </edge>
+    <edge source="com.company.Main" target="com.company.Onion">
+      <point x="-16.40625" y="-14.5" />
+      <point x="517.0529017857143" y="333.0" />
+      <point x="347.4375" y="333.0" />
+      <point x="-20.25" y="14.5" />
+    </edge>
+    <edge source="com.company.Main" target="com.company.Potato">
+      <point x="-2.34375" y="-14.5" />
+      <point x="531.1154017857143" y="303.0" />
+      <point x="490.4375" y="303.0" />
+      <point x="20.75" y="14.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="277.0" y="95.5" />
+  <SelectedNodes>
+    <node>com.company.Vegetables</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Constructors</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
