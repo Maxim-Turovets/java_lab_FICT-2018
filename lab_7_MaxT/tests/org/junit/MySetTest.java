@@ -6,8 +6,7 @@ import java.util.ArrayList;
 import static org.junit.Assert.*;
 
 public class MySetTest {
-
-    @Test
+  @Test
     public void size() {
         Salad salad1 = new Salad();
         MySet mySet = new MySet();
