@@ -13,7 +13,7 @@
     <node x="862.5" y="541.5">com.company.Potato</node>
     <node x="1037.5" y="541.5">com.company.Onion</node>
   </nodes>
-  <notes />
+  <notes/>
   <edges>
     <edge source="com.company.Carrot" target="com.company.Vegetables">
       <point x="0.0" y="-25.5" />
